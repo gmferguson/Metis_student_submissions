@@ -1,0 +1,64 @@
+Gretta Mae
+Ferguson
+Data Scientist   |   Product Manager   |   Business Analyst
+grettamaeferguson@gmail.com
+256-710-3729
+Seattle, WA, willing to relocate
+
+Summary
+Experienced business analyst and data scientist, motivated to help turn data into insights and insights into action. Has over 5 years of direct professional experience in addition to 5 years building these skills in academia. Is curiosity driven and strategically minded.
+
+Education
+Metis Data Science Bootcamp 2018 - 2018
+Pomona College 2010 - 2013
+Bachelors in Mathematics
+Bachelors in Physics
+Davidson College 2008 - 2010
+
+Employment
+McKinsey and Company
+Senior Analyst
+Atlanta - New York - Seattle
+August 2014 to July 2018
+* Collaborated on hypothesis-driven, iterative product development of "Portfolio Navigator", a suite of business intelligence dashboards that help users to segment customers, price products, identify opportunities, and develop business strategy. Grew “Portfolio Navigator” subscription revenue 75% YoY to ~2M in annual revenue.
+* Led systems design for multiple projects, establishing data collection processes via SFTP and web scraping as well as designing and optimizing several dozen SQL databases that analyze over 1 billion rows of raw data. Wrote technical business requirements for data engineering team and audited SQL code logic to improve data quality and processing efficiency.
+* Managed monthly sprints with team of 6 to deliver monthly product updates. Created multi-year product roadmaps, driving consensus with key business partners across 20+ internal and external teams on data inputs, modeling methodology, and UX design.
+* Provided strategic recommendations as management consultant on numerous engagements. Recommended P&L opportunities by analyzing footprint optimization, vendor pricing strategy, product requirements, survey interpretation, B2B negotiation tactics and creative financing. 
+
+Med Plis Inc
+Business Analyst
+Florence AL
+June 2013 - July 2014
+* Compiled data from various sources (like patient records, business finances, payroll, etc.) and extracted information to advise management on financial optimization efforts. 
+* Drafted the budget for a comprehensive ((radio, print, and online) advertising campaign. 
+* Launched Google AdWords and improved search visibility of the company website.
+
+Skills
+Algorithms and Statistics
+Python (incl. SKLearn, pandas, etc)
+R
+Database Management
+SQL 
+NoSQL (MangoDB)
+Data Visualization
+Tableau
+MatPlotLib
+AltAir
+Rapid web app development
+Flask
+JavaScript
+HTML/CSS
+
+Awards
+Author on Peer Reviewed Publication in Polymers Journal
+June 2015
+Title: Comparative Indoor and Outdoor Degradation of Organic Photovoltaic Cells via Inter-laboratory Collaboration
+Winner of Roland R Tileston Memorial Prize in Physics
+May 2011
+Established in 1952 in honor of physics professor R.R. Tileston, this prize is awarded to an outstanding student in physics whose record in the department is judged most promising.
+
+Volunteering
+Puget Sound Programming Python  (PuPPy)
+Charity Dinner Gala Chair
+Seattle
+2018

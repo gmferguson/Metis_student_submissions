@@ -1,0 +1,68 @@
+<html>
+  <head>
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <h1>Super Cool Job Recommender</h1>
+    <div class="review-input">
+      <p><textarea rows="4" cols="50"
+                id='resume_text'
+                placeholder='Please insert your resume text here'></textarea></p>
+      <p><textarea rows="1" cols="50"
+                id='job_title'
+                placeholder='Job title'></textarea></p>
+      <p><textarea rows="1" cols="50"
+                id='company'
+                placeholder='Company'></textarea></p>
+      <p><textarea rows="1" cols="50"
+                id='location'
+                placeholder='Location'></textarea></p>
+      <!-- <p><textarea rows="1" cols="50"
+                id='stars'
+                placeholder='Min company rating (0-5)'></textarea></p> -->
+      <button id='do_it' onclick='updateScore()'>Submit</button>
+    </div>
+
+    <p> <div id="output"> </div></p>
+
+    <script type='text/javascript' src="{{url_for('static', filename='js/jquery.js') }}"></script>
+
+    <script>
+    function updateScore(){
+      const theResume = document.getElementById('resume_text').value;
+      const theCompany = document.getElementById('company').value;
+      const theLocation = document.getElementById('location').value;
+      const outputElement = document.getElementById('output');
+      const theJob_title = document.getElementById('job_title').value;
+      // const theStars = document.getElementById('stars');
+      if (theResume.length < 15) {
+          outputElement.textContent = 'Need more text to provide recommendation';
+          return;
+      }
+
+      $.ajax({
+        type: 'POST',
+        contentType: "application/json; charset=utf-8",
+        url: '/recommendation',
+        async: true,
+        data: JSON.stringify({
+          resume: theResume,
+          company: theCompany,
+          location: theLocation,
+          job_title: theJob_title,
+          // stars: theStars,
+        }),
+        success: (response) => {
+          // outputElement.textContent = response.recommendation;
+          location.href = response.recommendation
+        },
+        error: (response) => {
+          outputElement.textContent = 'INVALID';
+        }
+      })
+    }
+    </script>
+
+  </body>
+
+</html>

@@ -1,0 +1,46 @@
+body{
+  background-color: #6699FF;
+  font-style: roboto;
+  font-size: large;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.review-input{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 66%;
+  margin: 0 auto;
+}
+
+.review-input textarea{
+  width: 100%;
+  border-radius: 5px;
+  font-size: medium;
+}
+
+.review-input button{
+  height: 2.5em;
+  border-radius: 15px;
+  font-weight: bold;
+  margin: 20px 0px;
+  font-size: large;
+}
+
+.result{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: yellow;
+  width: 66%;
+  margin: 20px auto;
+}
+
+.smile{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
