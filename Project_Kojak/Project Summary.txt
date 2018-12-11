@@ -1,0 +1,21 @@
+Final project summary:
+
+Motivation
+
+Proteins are the “doers” in our cells. So most cellular process that researchers are trying to track, diagnose, or treat are carried out by proteins. It is therefore valuable to be able to classify a protein’s location because each location in the cell has characteristic physical traits - like ph and hydrophobicity - which can reveal a lot about a given proteins’ form and function. Furthermore, with the advent of High Throughput Microscopy (HTP), researchers can rapidly collect millions of images, but this creates a bottleneck unless we can also automate the image analytics.
+
+Data
+
+I had access to images of 31,100 labeled samples for this project. I split this data into 3 pools: training, validation, and and out-of-sample testing. For each sample, I had 4 stackable images that each highlighted different parts of the cell as well as the protein whose location I was trying to classify. I was classifying location across many different types of cells with unique morphologies, which alone would be a non-trivial complication. Another complication was that any given sample could be labeled with numerous classes. 
+
+This multi-label condition also complicated the existence of a class imbalance in the data. If I up-sampled on all samples containing a minority label, then I would also inadvertently also upsample on my majority classes because they co-occur on a large portion of the minority samples. I could instead imagine upsampling on only the single label minority samples, however this would effectively eliminate any information the model could learn regarding correlations across classes.
+
+The original dataset contained 28 different classes, however I paired the problem back to only consider the 15 classes which occured in at least 200 single-label samples and 700 multi-label samples.
+
+Process and Tools
+
+I used matplotlib, pandas, sklearn, skmultilearn, numpy, and keras with tensorflow to build my pipeline. I then ran my model on an EC2 AWS instance. The first step was converting images into a 4D matrix with each value representing the intensity/brightness of a given channel for a given pixel. The resulting matrix had 31K x 512 x 512 x 4 = 32.5 billion elements. Next I developed my own CNN and experimented with various architectures by tuning: number of convolution and pooling layers, optimization function, number of neurons, etc. I leveraged an image generator which randomly flipped and rotated my images so that I could provide a more diverse training set. Finally I trained the best architecture and tested it on my test data. 
+
+Results, Conclusions and Future Work
+
+My model had an AUC of 0.86, an F1 of 0.56 and an accuracy of 94%. The model did a better job predicting majority classes than minority classes. For future work I would like to extend my model to include all 28 classes and submit my results to the Human Protein Atlas Kaggle competition. I also would like to try running my model on more epochs because it seemed to still be learning things when my 100 epoch limit was reached.
